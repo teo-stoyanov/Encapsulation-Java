@@ -5,12 +5,12 @@ class Chicken {
     private int age;
 
     Chicken(String name, int age) {
-        setName(name);
-        setAge(age);
+        this.setName(name);
+        this.setAge(age);
     }
 
     private void setName(String name) {
-        if (name.length() < 1) {
+        if (name.length() < 1 || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be empty.");
         }
         this.name = name;
